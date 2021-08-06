@@ -1,4 +1,4 @@
-import {GET_TECHS, ADD_TECH, DELETE_TECH, SET_LOADING, TECHS_ERROR, GET_LOGS, LOGS_ERROR} from "./types";
+import {GET_TECHS, ADD_TECH, DELETE_TECH, SET_LOADING, TECHS_ERROR} from "./types";
 
 // get techs from server
 export const getTechs = () => async dispatch => {

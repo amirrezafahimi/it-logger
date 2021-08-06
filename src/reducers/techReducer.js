@@ -1,4 +1,4 @@
-import {GET_TECHS, ADD_TECH, DELETE_TECH, SET_LOADING, TECHS_ERROR, GET_LOGS, LOGS_ERROR} from "../actions/types";
+import {GET_TECHS, ADD_TECH, DELETE_TECH, SET_LOADING, TECHS_ERROR} from "../actions/types";
 
 const initialState = {
     techs: null,
@@ -6,6 +6,7 @@ const initialState = {
     error: null
 }
 
+// eslint-disable-next-line
 export default (state = initialState, action) => {
     switch (action.type) {
         case GET_TECHS:
