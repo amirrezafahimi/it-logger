@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import PropTypes from "prop-types"
 import {updateLog} from "../../actions/logActions";
 import M from "materialize-css/dist/js/materialize.min";
+import TechSelectOptions from "../techs/TechSelectOptions";
 
 
 const EditLogModal = ({updateLog, current}) => {
@@ -55,9 +56,7 @@ const EditLogModal = ({updateLog, current}) => {
                         <select name="tech" value={tech} className="browser-default"
                                 onChange={event => setTech(event.target.value)}>
                             <option value="" disabled>Select Technician</option>
-                            <option value="John Doe">John Doe</option>
-                            <option value="Sam Smith">Sam Smith</option>
-                            <option value="Sara Wilson">Sara Wilson</option>
+                            <TechSelectOptions/>
                         </select>
                     </div>
                 </div>
