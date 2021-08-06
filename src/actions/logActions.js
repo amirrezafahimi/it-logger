@@ -29,7 +29,7 @@ export const getLogs = () => async dispatch => {
         const data = await res.json();
         dispatch({type: GET_LOGS, payload: data});
     } catch (e) {
-        dispatch({type: LOGS_ERROR, payload: e.response.data});
+        dispatch({type: LOGS_ERROR, payload: e.response.statusText});
     }
 
 };
@@ -45,7 +45,7 @@ export const deleteLog = (id) => async dispatch => {
         });
         dispatch({type: DELETE_LOG, payload: id});
     } catch (e) {
-        dispatch({type: LOGS_ERROR, payload: e.response.data});
+        dispatch({type: LOGS_ERROR, payload: e.response.statusText});
     }
 
 };
@@ -81,7 +81,7 @@ export const updateLog = log => async dispatch => {
         const data = await res.json();
         dispatch({type: UPDATE_LOG, payload: data});
     } catch (e) {
-        dispatch({type: LOGS_ERROR, payload: e.response.data});
+        dispatch({type: LOGS_ERROR, payload: e.response.statusText});
     }
 
 };
@@ -96,7 +96,7 @@ export const searchLogs = (text) => async dispatch => {
         const data = await res.json();
         dispatch({type: SEARCH_LOGS, payload: data});
     } catch (e) {
-        dispatch({type: LOGS_ERROR, payload: e.response.data});
+        dispatch({type: LOGS_ERROR, payload: e.response.statusText});
     }
 
 };
@@ -117,7 +117,7 @@ export const addLog = (log) => async dispatch => {
         const data = await res.json();
         dispatch({type: ADD_LOG, payload: data});
     } catch (e) {
-        dispatch({type: LOGS_ERROR, payload: e.response.data});
+        dispatch({type: LOGS_ERROR, payload: e.response.statusText});
     }
 
 };
